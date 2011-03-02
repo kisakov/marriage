@@ -1,0 +1,61 @@
+<h2>Список персон</h2>
+<table>
+<tr>
+    <th>N</th>
+    <th>Фамилия</th>
+    <th>Имя</th>
+    <th>Пол</th>
+    <th>Возраст</th>
+    <th>Семейное положение</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+</tr>
+<% i=1 %>
+<% @person.each do |persona| %>
+  <tr <% if persona.marriage %>class="marry"<% end %>>
+    <td><%= i %></td>
+    <td><%= persona.last_name %></td>
+    <td><%= persona.first_name %></td>
+    <td><%= persona.sex %></td>
+    <td><%= persona.age %></td>
+    <td><%= stat(persona.sex, persona.marriage) %></td>
+    <td><a href="/person/edit/<%= persona.id %>">Редактировать</a></td>
+    <td><a href="/person/delete/<%= persona.id %>">Удалить</a></td>
+  </tr>
+<% i += 1 %>
+<% end %>
+</table>
+<br />
+<a href="/person/new" class="admin">+ Создать персону</a>
+<br /><br />
+
+<h2>Список свадеб</h2>
+<table>
+<tr>
+    <th>N</th>
+    <th>Жених</th>
+    <th>Невеста</th>
+    <th>Музыка</th>
+    <th>Цветы</th>
+    <th>Гости</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+</tr>
+<% i=1 %>
+<% @marriage.each do |marry| %>
+  <tr>
+    <td><%= i %></td>
+    <td><%= get_name(marry.groom_id) %></td>
+    <td><%= get_name(marry.bride_id) %></td>
+    <td><%= marry.flowers %></td>
+    <td><%= marry.music %></td>
+    <td><%= marry.guests %></td>
+    <td><a href="/marriage/edit/<%= marry.id %>">Редактировать</a></td>
+    <td><a href="/marriage/delete/<%= marry.id %>">Удалить</a></td>
+  </tr>
+<% i += 1 %>
+<% end %>
+</table>
+<br />
+
+<a href="/marriage/new" class="admin">+ Сыграть свадьбу</a>

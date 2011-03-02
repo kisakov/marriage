@@ -1,0 +1,132 @@
+body {
+	background-color: #789;
+	font-family: georgia, serif;
+	font-size: 13px;
+}
+a
+{
+	color: #669;
+	font-weight: bolder;
+}
+a:hover
+{
+	color: #d00;
+}
+#content {
+	display: block;
+	width: 812px;
+	margin: 40px auto 10px;
+	padding: 10px;
+	background-color: #FFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border:2px solid black;
+	-moz-box-shadow: 0 0 14px #123;
+	-webkit-box-shadow: 0 0 14px #123;
+	box-shadow: 0 0 14px #123;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+table td, th
+{
+	border: 1px solid #000;
+	padding: 10px;
+}
+table th
+{
+	font-weight: bolder;
+	background-color: #ccc;
+}
+
+fieldset {
+border: 0;
+	}
+legend {
+font-size: 24px;
+font-weight: bold;
+}
+input[type=text],input[type=password],label {
+display: block;
+width: 70%;
+font-weight: bold;
+}
+
+textarea {
+width: 99%;
+height: 200px;
+}
+input[type=text],input[type=password], select,textarea {
+border: 1px solid #123;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: inset 1px 2px 4px #789;
+-webkit-box-shadow: inset 1px 2px 4px #789;
+box-shadow: inset 1px 2px 4px #789;
+padding: 4px;
+margin: 0 0 4px;
+font-size: 16px;
+font-family: georgia, serif;
+}
+input[type=submit] {
+margin: 4px 0;
+padding: 4px;
+border: 1px solid #123;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+-webkit-box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+background-color: #789;
+font-family: georgia, serif;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 14px;
+text-shadow: 0px 0px 1px #fff;
+}
+a.admin {
+display: inline-block;
+margin: 4px 0;
+padding: 4px;
+border: 1px solid #123;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+-webkit-box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+box-shadow: inset -2px -1px 3px #345,
+inset 1px 1px 3px #BCF,
+1px 2px 6px #789;
+background-color: #789;
+color: black;
+text-decoration: none;
+font-family: georgia, serif;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 14px;
+text-shadow: 0px 0px 1px #fff;
+}
+.marry
+{
+    background: #FCC;
+}
+.error
+{
+    color: #F00;
+    font-size: 20px;
+}

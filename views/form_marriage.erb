@@ -1,0 +1,40 @@
+<%= @msg %>
+
+<form method="POST" name="marriage" id="marriage" action="/marriage/<%= @form_action %>">
+  <fieldset>
+      <legend><%= @title %></legend>
+      <% if @form_action == "update" %>
+        <input type="hidden" name="groom_name" value="<%= @marriage["groom_id"] %>" />
+        <input type="hidden" name="bride_name" value="<%= @marriage["bride_id"] %>" />
+      <% else %>
+          <label for="groom_name">Жених (*)</label>
+          <select name="groom_name" size="1">
+            <% @suitors.each do |groom| %>
+            <option value="<%= groom.id %>"><%= groom.last_name %> <%= groom.first_name %></option>
+            <% end %>
+          </select>
+
+          <label for="bride_name">Невеста (*)</label>
+          <select name="bride_name" size="1">
+            <% @brides.each do |bride| %>
+            <option value="<%= bride.id %>"><%= bride .last_name %> <%= bride.first_name %></option>
+            <% end %>
+          </select>
+      <% end %>
+
+
+      <label for="music">Музыка</label>
+      <input type="text" name="music" id="music" value="<%= @marriage["music"] %>" />
+
+      <label for="flowers">Цветы</label>
+      <input type="text" name="flowers" id="flowers" value="<%= @marriage["flowers"] %>" />
+
+      <label for="guests">Гости</label>
+      <input type="text" name="guests" id="guests" value="<%= @marriage["guests"] %>" />
+
+      <input type="hidden" name="id" value="<%= @marriage["id"] %>" />
+
+      <input type="submit" value="<%= @title %>" /> или <a href="/">отмена</a>
+
+  </fieldset>
+</form>

@@ -1,0 +1,29 @@
+<%= @msg %>
+
+<form method="POST" name="person" id="person" action="/person/<%= @form_action %>">
+  <fieldset>
+      <legend><%= @title %></legend>
+
+      <label for="last_name">Фамилия (*)</label>
+      <input type="text" name="last_name" id="last_name" value="<%= @persona["last_name"] %>" />
+
+      <label for="first_name">Имя (*)</label>
+      <input type="text" name="first_name" id="first_name" value="<%= @persona["first_name"] %>" />
+
+      <label for="sex">Пол (*)</label>
+      <select name="sex" size="1">
+        <option value="муж" <% if @persona["sex"] == "муж" %>selected<% end %>>мужской</option>
+        <option value="жен" <% if @persona["sex"] == "жен" %>selected<% end %>>женский</option>
+      </select>
+
+
+      <label for="age">Возраст (*)</label>
+      <input type="text" name="age" id="age" value="<%= @persona["age"] %>" />
+
+      <input type="hidden" name="marriage" value="false" />
+      <input type="hidden" name="id" value="<%= @persona["id"] %>" />
+
+      <input type="submit" value="<%= @title %>" /> или <a href="/">отмена</a>
+
+  </fieldset>
+</form>
